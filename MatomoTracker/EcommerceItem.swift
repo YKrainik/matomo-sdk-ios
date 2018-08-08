@@ -10,7 +10,7 @@ import Foundation
 
 public struct EcommerceItem {
 	public let sku: String
-	public let name: String?
+	public var name: String?
 	public var category: String?
 	public var price: Double
 	public var quantity: Double
