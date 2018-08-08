@@ -335,6 +335,23 @@ extension MatomoTracker {
     }
 }
 
+extension MatomoTracker {
+	public func cartUpdate(_ ecommerceUpdate: EcommerceUpdate) {
+		do {
+			let variables = try ecommerceUpdate.variables()
+			let event = Event(tracker: self, action: [], variables: variables)
+			queue(event: event)
+		}  catch let error {
+			 self.logger.warning("Failed dispatching events with error \(error)")
+		}
+
+		print("Here: \(ecommerceUpdate.jsonDict())")
+	}
+
+	public func cartOrder(_ ecommerceOrder: EcommerceOrder) {
+		print("Here: \(ecommerceOrder.jsonDict())")
+	}
+}
 
 extension MatomoTracker {
 

@@ -36,6 +36,9 @@
 		1FDC917F1F1A65150046F506 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC917D1F1A65150046F506 /* Application.swift */; };
 		1FDC91801F1A65150046F506 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC917E1F1A65150046F506 /* Device.swift */; };
 		5804E9A4755E642D58301330 /* Pods_MatomoTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DC1BA4812B98CA8037194A /* Pods_MatomoTrackerTests.framework */; };
+		6E2B7439211AE65600E8BD0D /* EcommerceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B7438211AE65600E8BD0D /* EcommerceItem.swift */; };
+		6E2B743B211B004700E8BD0D /* EcommerceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B743A211B004700E8BD0D /* EcommerceOrder.swift */; };
+		6E2B743D211B08FC00E8BD0D /* EcommerceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B743C211B08FC00E8BD0D /* EcommerceUpdate.swift */; };
 		FDCA325A2093BFFB007D6B42 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FDCA32592093BFFB007D6B42 /* README.md */; };
 		FDE4330E209367A000A9CC36 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = FDE4330D209367A000A9CC36 /* .travis.yml */; };
 /* End PBXBuildFile section */
@@ -85,6 +88,9 @@
 		2FD38CC515C49A9A8922407D /* Pods-MatomoTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatomoTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatomoTrackerTests/Pods-MatomoTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		63DC1BA4812B98CA8037194A /* Pods_MatomoTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatomoTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F0C25DEF98C13D32CC46DD /* Pods_PiwikTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiwikTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2B7438211AE65600E8BD0D /* EcommerceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceItem.swift; sourceTree = "<group>"; };
+		6E2B743A211B004700E8BD0D /* EcommerceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceOrder.swift; sourceTree = "<group>"; };
+		6E2B743C211B08FC00E8BD0D /* EcommerceUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceUpdate.swift; sourceTree = "<group>"; };
 		8F688B0F18F298B5E61552AC /* Pods-PiwikTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiwikTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiwikTrackerTests/Pods-PiwikTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECADEAA1E653EE3DA30A1FDC /* Pods-MatomoTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatomoTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatomoTrackerTests/Pods-MatomoTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD284F50B998823EAFB0CEE9 /* Pods-PiwikTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiwikTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiwikTrackerTests/Pods-PiwikTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 		1FCA6D3D1DBE0B2F0033F01C /* MatomoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6EDE180B211AE5F60017CCC9 /* Ecommerce */,
 				1F80856D1E6B4B8000A61AAF /* Extensions */,
 				1F0A15CC1E6335CA00FEAE72 /* Event */,
 				1F092C191E26B44500394B30 /* Dispatcher.swift */,
@@ -210,6 +217,16 @@
 				2FD38CC515C49A9A8922407D /* Pods-MatomoTrackerTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6EDE180B211AE5F60017CCC9 /* Ecommerce */ = {
+			isa = PBXGroup;
+			children = (
+				6E2B7438211AE65600E8BD0D /* EcommerceItem.swift */,
+				6E2B743A211B004700E8BD0D /* EcommerceOrder.swift */,
+				6E2B743C211B08FC00E8BD0D /* EcommerceUpdate.swift */,
+			);
+			name = Ecommerce;
 			sourceTree = "<group>";
 		};
 		ADAE39D28F21B08F51A5C6A8 /* Frameworks */ = {
@@ -385,12 +402,15 @@
 				1FDC91801F1A65150046F506 /* Device.swift in Sources */,
 				1F3CA58C1E09A30600121FDC /* Queue.swift in Sources */,
 				1F0A15D01E6335E900FEAE72 /* Session.swift in Sources */,
+				6E2B743D211B08FC00E8BD0D /* EcommerceUpdate.swift in Sources */,
+				6E2B743B211B004700E8BD0D /* EcommerceOrder.swift in Sources */,
 				1F092C1A1E26B44500394B30 /* Dispatcher.swift in Sources */,
 				1F38EBF81EE568D10021FBF8 /* Logger.swift in Sources */,
 				1FC2B429201F8C010061F5AD /* CustomVariable.swift in Sources */,
 				1FCFF0241F82C7A50038BC17 /* CustomDimension.swift in Sources */,
 				1F7C667F1F8C096F0066CC64 /* MainThread.swift in Sources */,
 				1F80856F1E6B4B9800A61AAF /* Locale+HttpAcceptLanguage.swift in Sources */,
+				6E2B7439211AE65600E8BD0D /* EcommerceItem.swift in Sources */,
 				1FD9E01C201B22A8006C3AD3 /* EventSerializer.swift in Sources */,
 				1F0A15CE1E6335D800FEAE72 /* Visitor.swift in Sources */,
 				1FDC917F1F1A65150046F506 /* Application.swift in Sources */,
