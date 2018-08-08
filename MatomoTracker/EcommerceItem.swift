@@ -9,12 +9,19 @@
 import Foundation
 
 public struct EcommerceItem {
-	let sku: String
-	let name: String?
-	let category: String?
-	let price: Double
-	let quantity: Double
-	let formatter: NumberFormatter
+	public let sku: String
+	public let name: String?
+	public var category: String?
+	public var price: Double
+	public var quantity: Double
+	public var formatter: NumberFormatter
+
+	public init(sku: String, price: Double, quantity: Double, formatter: NumberFormatter) {
+		self.sku = sku
+		self.price = price
+		self.quantity = quantity
+		self.formatter = formatter
+	}
 
 	public func jsonObject() -> Any {
 
