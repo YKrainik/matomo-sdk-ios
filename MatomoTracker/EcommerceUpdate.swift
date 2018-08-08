@@ -32,10 +32,14 @@ public class EcommerceUpdate {
 
 			let (offset, element) = arg
 
-			let data = try JSONSerialization.data(withJSONObject: element.value, options: [])
-			let jsonValue = String.init(data: data, encoding: String.Encoding.utf8) ?? ""
+			if let stringValue = element as? String {
+				return CustomVariable(index: UInt(offset), name: element.key, value: stringValue)
+			} else {
+				let data = try JSONSerialization.data(withJSONObject: element.value, options: [])
+				let jsonValue = String.init(data: data, encoding: String.Encoding.utf8) ?? ""
 
-			return CustomVariable(index: UInt(offset), name: element.key, value: jsonValue)
+				return CustomVariable(index: UInt(offset), name: element.key, value: jsonValue)
+			}
 		}
 	}
 
