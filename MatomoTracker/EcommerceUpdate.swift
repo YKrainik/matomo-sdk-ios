@@ -32,7 +32,7 @@ public class EcommerceUpdate {
 
 			let (offset, element) = arg
 
-			if let stringValue = element as? String {
+			if let stringValue = element.value as? String {
 				return CustomVariable(index: UInt(offset), name: element.key, value: stringValue)
 			} else {
 				let data = try JSONSerialization.data(withJSONObject: element.value, options: [])
