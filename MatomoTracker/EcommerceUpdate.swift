@@ -13,7 +13,7 @@ public class EcommerceUpdate {
 	public var revenue: Double = 0
 	public let formatter: NumberFormatter
 
-	init(formatter: NumberFormatter) {
+	public init(formatter: NumberFormatter) {
 		self.formatter = formatter
 	}
 

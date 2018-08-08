@@ -15,7 +15,7 @@ public class EcommerceOrder: EcommerceUpdate {
 	public var discount: Double?
 	public var tax: Double?
 
-	init(orderId: String, formatter: NumberFormatter) {
+	public init(orderId: String, formatter: NumberFormatter) {
 		self.orderId = orderId
 		super.init(formatter: formatter)
 	}
